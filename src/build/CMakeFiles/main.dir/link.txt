@@ -1,0 +1,1 @@
+/usr/bin/gcc -rdynamic CMakeFiles/main.dir/encode.c.o -o main   -L/usr/local/lib  -Wl,-rpath,/usr/local/lib /usr/local/lib/libSDL2.so /usr/local/lib/libSDL2_sound.so -lavcodec -lavutil 

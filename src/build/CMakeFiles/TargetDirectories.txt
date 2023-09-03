@@ -1,0 +1,3 @@
+/home/kesavan/personal/music-player/src/build/CMakeFiles/main.dir
+/home/kesavan/personal/music-player/src/build/CMakeFiles/edit_cache.dir
+/home/kesavan/personal/music-player/src/build/CMakeFiles/rebuild_cache.dir

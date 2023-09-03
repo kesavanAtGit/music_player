@@ -1,0 +1,23 @@
+cmake_minimum_required(VERSION 3.0)
+project(Music-Player)
+
+set(CMAKE_CC_STANDARD 11)
+set(CMAKE_CC_STANDARD_REQUIRED ON)
+
+find_package(SDL2 REQUIRED)
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_SOURCE_DIR}/cmake/")
+
+find_library(SDL2_MIXER_LIBRARIES NAMES SDL2_mixer)
+find_library(LIBAVCODEC_LIBRARIES NAMES avcodec)
+find_library(LIBAVUTIL_LIBRARIES NAMES avutil)
+
+include_directories(${SDL2_INCLUDE_DIRS} ${SDL2_MIXER_INCLUDE_DIRS} ${SNDFILE_INCLUDE_DIRS} ${LIBAVCODEC_INCLUDE_DIRS} ${LIBAVUTIL_INCLUDE_DIRS})
+
+add_executable(main encode.c)
+
+target_link_libraries(main PRIVATE
+    ${SDL2_LIBRARIES}
+    ${SDL2_SOUND_LIBRARIES}
+    ${LIBAVCODEC_LIBRARIES}
+    ${LIBAVUTIL_LIBRARIES}
+)
